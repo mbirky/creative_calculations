@@ -11,7 +11,6 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     ''' This will point to the latest post '''
-    abort(404)
     return 'Index Page'
 
 @app.route('/<post_name>')
