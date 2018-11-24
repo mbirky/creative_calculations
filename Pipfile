@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 flask = "*"
 pytest = "*"
+travis = "*"
 
 [dev-packages]
 pylint = "*"
