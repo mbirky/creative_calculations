@@ -1,4 +1,4 @@
-# Creative Calculations
+# Creative Calculations [![Build Status](https://travis-ci.com/mbirky/creative_calculations.svg?branch=master)](https://travis-ci.com/mbirky/creative_calculations)
 
 This is my website that will is hosted at creativecalculations.com.
 
@@ -30,9 +30,16 @@ Set Flask development mode
 export FLASK_ENV=development
 ```
 
+Run Flask
+```
+flask run
+```
+
 ## Built With
 
-* [Flask](http://flask.pocoo.org/) - a microframework for Python 
+* [Flask](http://flask.pocoo.org/) - a microframework for Python
+* [Travis CI](https://travis-ci.org/) - Continuous Integration and Deployment
+* [Heroku](https://www.heroku.com) - Hosting
 
 ## Author
 
