@@ -5,13 +5,13 @@ The index page will be the latest post and a user can find a specific post by
 specifiging the post name
 '''
 
-from flask import Flask, abort
+from flask import Flask, abort, send_file
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     ''' This will point to the latest post '''
-    return 'Index Page'
+    return send_file('posts/helloworld.html')
 
 @app.route('/<post_name>')
 def post(post_name):
