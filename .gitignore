@@ -10,3 +10,6 @@ instance/
 
 # VS Code
 .vscode
+
+# Coverage Report
+.coverage

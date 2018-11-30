@@ -1,0 +1,7 @@
+# .coveragerc to control coverage.py
+[run]
+branch = true
+source = creative_calculations
+
+[report]
+fail_under = 100
