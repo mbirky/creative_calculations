@@ -1,11 +1,18 @@
-import sys
-sys.path.append('../creative_calculations')
+"""
+Testing of the creative_calculation module
+"""
+
 import pytest
 
 import creative_calculations
 
+# pylint:disable=redefined-outer-name
+
 @pytest.fixture
 def client():
+    """
+    Create a client fixture to run the tests with
+    """
     creative_calculations.app.config['TESTING'] = True
     client = creative_calculations.app.test_client()
 
@@ -29,7 +36,7 @@ def test_post(client):
     """
     response = client.get('/hello_world')
     assert response.status_code == 200
-    assert b"hello_world" == response.data
+    assert response.data == b"hello_world"
 
 def test_404(client):
     """
@@ -39,4 +46,4 @@ def test_404(client):
     """
     response = client.get('/error/404')
     assert response.status_code == 404
-    assert b"404: Not all who wander are lost, but you are." == response.data
+    assert response.data == b"404: Not all who wander are lost, but you are."
