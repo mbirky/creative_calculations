@@ -5,13 +5,14 @@ name = "pypi"
 
 [packages]
 flask = "*"
-pytest = "*"
 travis = "*"
 gunicorn = "*"
 
 [dev-packages]
 pylint = "*"
+pytest = "*"
 pytest-cov = "*"
+creative-calculations = {editable = true, path = "."}
 
 [requires]
 python_version = "3.7"
