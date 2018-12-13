@@ -9,4 +9,4 @@ install:
 
 script:
   - 'pytest --cov'
-  - 'pylint creative_calculations tests'
+  - 'pylint creative_calculations tests/* setup.py'

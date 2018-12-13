@@ -13,3 +13,5 @@ instance/
 
 # Coverage Report
 .coverage
+
+*.egg-info/
