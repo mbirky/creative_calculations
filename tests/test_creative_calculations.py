@@ -28,15 +28,25 @@ def test_home_page(client):
     assert response.status_code == 200
     assert b"Hello World" in response.data
 
-def test_post(client):
+def test_post_200(client):
     """
     GIVEN a Flask application
     WHEN the '/<post_name>' pages is requested (GET)
     THEN check the response is 200 and contains <post_name>
     """
-    response = client.get('/hello_world')
+    response = client.get('/helloworld')
     assert response.status_code == 200
-    assert response.data == b"hello_world"
+    assert b"Hello World" in response.data
+
+def test_post_404(client):
+    """
+    GIVEN a Flask application
+    WHEN the '/<post_name>' pages is requested (GET)
+    THEN check the response is 200 and contains <post_name>
+    """
+    response = client.get('/bad_post_12345')
+    assert response.status_code == 404
+    assert response.data == b"404: Not all who wander are lost, but you are."
 
 def test_404(client):
     """

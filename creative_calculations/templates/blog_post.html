@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+    type="text/css"
+    href="../static/style.css">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <div class="row">
+        <div class="column side-bar"></div>
+        <div class ="post column">
+            <h1>{{ title }}</h1>
+            {% for paragraph in paragraphs %}
+                <p>{{ paragraph }}</p>
+            {% endfor %}
+        </div>
+        <div class="column side-bar">
+            <h3>Other Posts</h3>
+            <ul>
+                {% for post in posts %}
+                    <li><a href={{ post }}>{{ post }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

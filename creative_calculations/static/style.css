@@ -1,0 +1,24 @@
+p {
+}
+
+h1 {
+  text-align: center;
+}
+
+.row {
+  display: flex
+}
+
+.column {
+  width: 25%;
+}
+
+.post {
+  width: 50%
+}
+
+.side-bar {
+  margin-top: 5%;
+}
+
+/* vim: tabstop=2 expandtab shiftwidth=2 softtabstop=2
