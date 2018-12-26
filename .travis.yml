@@ -8,5 +8,5 @@ install:
   - 'pipenv install --dev'
 
 script:
-  - 'pytest --cov'
-  - 'pylint creative_calculations tests/* setup.py'
+  - 'make test'
+  - 'make lint'
