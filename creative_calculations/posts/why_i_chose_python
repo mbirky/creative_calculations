@@ -1,0 +1,14 @@
+Why I Chose Python
+    These days, there exist a lot of programming language choices. Most modern, and a few not so modern, languages each have a user base firmly grasping a compiled list of reason that their language is the best. Trying to sift through the claims and arguments to choose what to develop with is tough, and earlier this year I had to do just that.
+
+    After much deliberation, testing, and playing around with different languages I settled on Python. Python comes prepackaged on most Linux machines, with the installation on Windows continuing to improve. I get to focus on the problem I am trying to solve. I also like that it has a long history, but continues to grow.
+
+    Most major operating systems come with Python pre-installed and those that don't make it easy to add. Both the Raspberry Pi and the BBC micro:bit have Python as their primary programming language and are great training tools for future software developers. Whether you start on a small device or a large development machine, it is easy to be up and running with Python quickly.
+
+    When I want to connect back to the rest of the world Python makes it easy; even Microsoft products must support a Python API to be considered complete. The Python core library gives me the tools to solve all of the algorithm problems I have come across, and if I have a data science problem, Python has shown its ability to handle it. In fact, Python has had a significant rise in popularity amongst data scientists.
+
+    The recent rise in notoriety is surprising, but not undeserved, for a language that was first released in 1991. Guido van Rossum created and was the primary maintainer until he stepped down in 2018. In December of 2018, the Python community finalized a new governance PEP. There were many good options for how to move forward as a people and users from all over the world took the time to vote on how the society would govern itself. The amount of thought and time that went into the decision shows that Python still draws people in and the community is ready for the next chapter.
+    I enjoy writing Python for its ease of setup, the freedom it gives me to think of the problem instead of the implementation, and for the community. There is still a part of me with my C++ background that likes to dig into the computer architecture to understand just how much memory I use when I create an int vs. an int_64, but for now, I will keep hacking away with Python.
+
+Stay Creative,
+Matthew Birky 
