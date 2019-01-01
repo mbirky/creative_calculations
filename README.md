@@ -16,29 +16,18 @@ These instructions will get you a copy of the project up and running on your loc
 Install needed pips
 
 ```
-pipenv install --dev
-```
-
-Export the Flask app
-
-```
-export FLASK_APP=creative_calculations
-```
-
-Set Flask development mode
-```
-export FLASK_ENV=development
+make setup
 ```
 
 Run Flask
 ```
-flask run
+make run
 ```
 
 ## Built With
 
-* [Flask](http://flask.pocoo.org/) - a microframework for Python
-* [Travis CI](https://travis-ci.org/) - Continuous Integration and Deployment
+* [Flask](http://flask.pocoo.org/) - A microframework for Python
+* [Travis CI](https://travis-ci.org/) - Continuous Integration
 * [Heroku](https://www.heroku.com) - Hosting
 
 ## Author
