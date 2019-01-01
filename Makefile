@@ -6,14 +6,19 @@ all:
 	@echo "    Run lint on project."
 	@echo "make run"
 	@echo "    Run the flask application"
+	@echo "make setup"
+	@echo "    Install the needed pips"
 	@echo "make test"
 	@echo "    Run tests on project."
 
 lint:
-	pylint creative_calculations tests/* setup.py
+	pipenv run pylint creative_calculations tests/* setup.py
 
 run:
-	flask run
+	pipenv run flask run
+
+setup:
+	pipenv install --dev
 
 test:
-	pytest --cov
+	pipenv run pytest --cov
