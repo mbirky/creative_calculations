@@ -1,1 +1,1 @@
-web: gunicorn creative_calculations:app
+web: gunicorn creative_calculations:APP
