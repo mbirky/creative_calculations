@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet"
     type="text/css"
     href="../static/style.css">
@@ -19,7 +20,7 @@
             <h3>Other Posts</h3>
             <ul>
                 {% for post in posts %}
-                    <li><a href={{ post }}>{{ post }}</a></li>
+                    <li><a href={{ post }}>{{ format_post(post) }}</a></li>
                 {% endfor %}
             </ul>
         </div>

@@ -14,4 +14,7 @@ instance/
 # Coverage Report
 .coverage
 
+# pytest
+.pytest_cache
+
 *.egg-info/
