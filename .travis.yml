@@ -1,12 +1,18 @@
 language: python
 
-python:
-  3.6
+python: 3.6
 
 install:
-  - 'pip install pipenv'
-  - 'pipenv install --dev'
+- pip install pipenv
+- pipenv install --dev
+
+addons:
+  sonarcloud:
+    organization: "mbirky-github"
+    token:
+      secure: "PvqKB8X52aQ/ZVGfLKfHAOeLdzEc8+7sO9vH0cm0vAruVzD4BwEj8felqst7UehycHBLfP98DfdPy0Z6L0YJv2ASKlJLDEwK/g2ijKp/U4EBWE9l65GcNzQJsCfMM2mC2BL3dEugYJ+fIzv/Jbhe1apD8eZrc8VcKzzj9VyTTl2lX7N7KIMJr2iH2A1elQxGWWw8oWpDWMd4IJIO1iQEXmkDqYmbKrRs6Sne7GtzLtiKfl7irUiLiGWfp/yM5Jh5bGW14koq1MnKbT4uKWOIUF28c566qrhnN0xog7p93B000rfO43i+Uy3hZoPrp+bSFTrMycZKQY5UHB9fMdAhYyIi/iHBVPhak9xzvYZUGUtG9YWS7WA6XSNdbDeCV9vQFch6z4d9x3AUlm00iZa96udJdoTG/1738BR9t5J+NaB3EyE6w696Kwbt6m2Ac7CAXxPZRVM3kki5VSihT/AvR4U3iZJTgKgSkMBMXEKDE5S36SU6pL4aF7j/fEoA8pGQEeTzPh4+w36ZtYOyDjykT2+fgakPBc/+3yHqvK6lTC6fd6xVssiQWiVi9zW3gtyMDk5ZY+WXWhXa/ZVk2fAkcYA80TezwYIYeNebG8PGzTBV+NhniUmU7kJrO7+r9baOxAgaroH5pYX0qrMjTn+6hN2qZQet4B7pWFEa3bSUjng="
 
 script:
-  - 'make test'
-  - 'make lint'
+- make test
+- make lint
+- sonar-scanner

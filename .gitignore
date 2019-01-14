@@ -13,5 +13,9 @@ instance/
 
 # Coverage Report
 .coverage
+coverage.xml
+
+# SonarQube
+.scannerwork/
 
 *.egg-info/

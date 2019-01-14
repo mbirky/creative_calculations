@@ -22,3 +22,4 @@ setup:
 
 test:
 	pipenv run pytest --cov
+	pipenv run coverage xml
