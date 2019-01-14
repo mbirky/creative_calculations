@@ -13,6 +13,10 @@ instance/
 
 # Coverage Report
 .coverage
+coverage.xml
+
+# SonarQube
+.scannerwork/
 
 # pytest
 .pytest_cache

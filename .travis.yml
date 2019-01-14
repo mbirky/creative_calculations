@@ -1,12 +1,16 @@
 language: python
 
-python:
-  3.6
+python: 3.6
 
 install:
-  - 'pip install pipenv'
-  - 'pipenv install --dev'
+- pip install pipenv
+- pipenv install --dev
+
+addons:
+  sonarcloud:
+    organization: "mbirky-github"
 
 script:
-  - 'make test'
-  - 'make lint'
+- make test
+- make lint
+- sonar-scanner
