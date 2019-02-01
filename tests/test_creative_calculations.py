@@ -10,7 +10,7 @@ def test_home_page(client):
     """
     response = client.get('/')
     assert response.status_code == 200
-    assert b"<h1>Hello World\n</h1>" in response.data
+    assert b"<h1>Hello World</h1>" in response.data
 
 def test_post_200(client):
     """
@@ -20,7 +20,7 @@ def test_post_200(client):
     """
     response = client.get('/hello_world')
     assert response.status_code == 200
-    assert b"<h1>Hello World\n</h1>" in response.data
+    assert b"<h1>Hello World</h1>" in response.data
 
 def test_404(client):
     """
