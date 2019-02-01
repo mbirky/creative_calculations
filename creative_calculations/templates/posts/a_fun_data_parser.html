@@ -1,0 +1,57 @@
+<h1>A Fun Data Parser</h1>
+
+<p>In the quest of figuring out what Data Structure to use or the O(n) of an algorithm I often forget that so many people out there don't know just how much a simple program a script could help them. Just the other day I was listening to a friend talk about some spreadsheet work they were doing that required grouping and averaging 1671 rows of data in a spread sheet. They had 5 colums in the sheet but only cared about 2 of them and the manual process of getting it all grouped was becoming taxing. I asked if I could see the data and attempt to get things soreted for them; to my joy, they said yes.</p>
+
+<p>The 5 columns were titled ID, response, comment, Vote Time, and Create Date. The only two columns that mattered were the response, which was an integer, and the Creation data that was formatted as "(date) (time)" an example being "3/1/2018 4:30". The goal was to take all of the responses for a given Create Date and average them.</p>
+    
+<p>My first step was to export the document from the google sheet to a csv file. Even if Python didn't have a csv file it would have been easy to parse but with the default csv library it became even easier. With my data.csv file it was time to start parsing, the first thing to do was import the csv library and create a dictionary that would have a key of the Creat Date, not including the time, the value would be a list of two elements, the total of the Responses and the count of Responses.</p>
+
+<pre>
+    <code>
+    import csv<br />
+    responses = {}<br />
+    </code>
+</pre>
+
+<p>Next, I needed to open my csv file and add up all my results keeping track of the result count. I wanted to skip the first line of the csv as it was header information and then after that add all of my responeses to the dictionary. One check I did have to make is if the date didn't already exist in the dictionary I needed to create a new entry and assign it to the current response number and set the response count to 1.</p>
+
+<pre>
+    <code>
+    with open('lunch.csv') as csv_file:<br />
+        &nbps csv_reader = csv.reader(csv_file, delimiter=',')<br />
+        # line count is used to skip the headers<br />
+        line_count = 0<br />
+        for row in csv_reader:<br />
+            if line_count == 0:<br />
+                line_count += 1<br />
+            else:<br />
+                # the Create Date is formated '(date) (time)' we only want the date<br />
+                date = row[4].split()[0]<br />
+                score = int(row[1])<br />
+                # if it exists add the score and the number of total votes<br />
+                if responses.get(date):<br />
+                    responses[date][0] += score<br />
+                    responses[date][1] += 1<br />
+                else:<br />
+                    responses[date] = [score, 1]<br />
+    </code>
+</pre>
+
+<p>Now that I had all of the data loaded, it was time to output it. I opened a file called response_avgs.csv and started to write out the date. The first line was the headers which are the date and the avg score. After the headers were out I went through each of the dictionary items writing out the date and the total ressponse score divided by the number of responses to get our average.</p>
+
+<pre>
+    <code>
+    with open('response_avgs.csv', 'w') as file:<br />
+        # Write out the headers<br />
+        file.write('date,avg score\n')<br />
+        # Write out the comma seperated values<br />
+        for date, values in responses.items():<br />
+            file.write(f'{date},{values[0]/values[1]:.1f}\n')<br />
+    </code>
+</pre>
+
+
+<p>While this project was nothing major, it saved my friend a few hours of work and was a fun exercise in how quickly I could get something like this written. I hope that you leared something and that the next time you see someone spinning their wheels trying to do a task that would be simple for a computer you help them out. Maybe you will even create a new coder while you are at it.</p>
+
+<p>Stay Creative,</p>
+<p>Matthew Birky</p>

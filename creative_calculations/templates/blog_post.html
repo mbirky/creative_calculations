@@ -5,16 +5,13 @@
     <link rel="stylesheet"
     type="text/css"
     href="../static/style.css">
-    <title>{{ title }}</title>
+    <title>{{ format_post(post_name) }}</title>
 </head>
 <body>
     <div class="row">
         <div class="column side-bar"></div>
         <div class ="post column">
-            <h1>{{ title }}</h1>
-            {% for paragraph in paragraphs %}
-                <p>{{ paragraph }}</p>
-            {% endfor %}
+            {% include 'posts/' + post_name + '.html' %}
         </div>
         <div class="column side-bar">
             <h3>Other Posts</h3>
